@@ -1,10 +1,14 @@
+const { v4: uuidv4 } = require('uuid');
+
 const messages = [
   {
+    id: uuidv4(),
     text: 'It seems alright, Jim.',
     user: 'George',
     added: new Date(),
   },
   {
+    id: uuidv4(),
     text: 'Not a fan',
     user: 'Paul',
     added: new Date(),
@@ -25,13 +29,16 @@ indexRouter.get('/', (req, res) =>
     },
   })
 );
+
 indexRouter.post('/new', (req, res) => {
   const newMessage = req.body;
   messages.push({
+    id: uuidv4(),
     text: newMessage['messageText'],
     name: newMessage['messageName'],
     added: new Date(),
   });
+  console.log(messages);
   res.redirect('/');
 });
 
