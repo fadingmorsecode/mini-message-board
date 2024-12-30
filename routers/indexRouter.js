@@ -17,7 +17,7 @@ indexRouter.get('/', async (req, res) =>
   })
 );
 
-indexRouter.get('/:messageId', getMessage);
+indexRouter.get('/message/:messageId', getMessage);
 
 indexRouter.post('/new', (req, res) => {
   const newMessage = req.body;
