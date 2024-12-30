@@ -1,9 +1,11 @@
 const express = require('express');
 const path = require('node:path');
 const indexRouter = require('./routers/indexRouter');
+const messageRouter = require('./routers/messageRouter');
 const app = express();
 
 app.use('/', indexRouter);
+app.use('/new', messageRouter);
 
 const PORT = 999;
 app.listen(PORT);
