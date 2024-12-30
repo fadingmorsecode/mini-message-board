@@ -16,9 +16,7 @@ const messages = [
 ];
 
 async function getMessageById(messageId) {
-  return messages.find((message) => {
-    return (message.id = messageId);
-  });
+  return messages.find((message) => messageId === message.id);
 }
 
 async function createMessage(message) {
