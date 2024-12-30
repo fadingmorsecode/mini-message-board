@@ -4,6 +4,7 @@ const indexRouter = require('./routers/indexRouter');
 const messageRouter = require('./routers/messageRouter');
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
 app.use('/', indexRouter);
 app.use('/new', messageRouter);
 
