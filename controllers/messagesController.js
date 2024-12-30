@@ -1,10 +1,10 @@
-const indexRouter = require('../routers/indexRouter');
+const db = require('../db');
 
 async function getMessage(req, res) {
-  const { id } = req.params;
-  console.log(id);
-  const message = await indexRouter.getAuthorById(Number(id));
-  res.render('details');
+  const { messageId } = req.params;
+  const message = await db.getMessageById(messageId);
+  console.log(message);
+  res.render('details', { message: message });
 }
 
 module.exports = { getMessage };

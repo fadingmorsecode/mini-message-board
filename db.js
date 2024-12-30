@@ -4,13 +4,13 @@ const messages = [
   {
     id: uuidv4(),
     text: 'It seems alright, Jim.',
-    user: 'George',
+    name: 'George',
     added: new Date(),
   },
   {
     id: uuidv4(),
     text: 'Not a fan',
-    user: 'Paul',
+    name: 'Paul',
     added: new Date(),
   },
 ];
@@ -23,13 +23,14 @@ function createMessage(message) {
   messages.push({
     id: message.id,
     message: message.text,
-    user: message.name,
+    name: message.name,
     added: message.added,
   });
 }
 
 async function getMessages() {
+  console.log(messages);
   return messages;
 }
 
-module.exports = { getMessages };
+module.exports = { getMessageById, getMessages };

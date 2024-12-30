@@ -1,5 +1,6 @@
 const { v4: uuidv4 } = require('uuid');
 const db = require('../db');
+const { getMessage } = require('../controllers/messagesController');
 
 const { Router } = require('express');
 
@@ -16,7 +17,7 @@ indexRouter.get('/', async (req, res) =>
   })
 );
 
-// indexRouter.get('/:messageId', getMessage);
+indexRouter.get('/:messageId', getMessage);
 
 indexRouter.post('/new', (req, res) => {
   const newMessage = req.body;
