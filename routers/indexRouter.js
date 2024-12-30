@@ -19,14 +19,15 @@ indexRouter.get('/', async (req, res) =>
 
 indexRouter.get('/message/:messageId', getMessage);
 
-indexRouter.post('/new', (req, res) => {
+indexRouter.post('/new', async (req, res) => {
   const newMessage = req.body;
-  db.createMessage({
+  await db.createMessage({
     id: uuidv4(),
-    text: newMessage['messageText'],
-    name: newMessage['messageName'],
+    text: newMessage.messageText,
+    name: newMessage.messageName,
     added: new Date(),
   });
+  console.log(await db.getMessages());
   res.redirect('/');
 });
 

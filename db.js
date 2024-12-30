@@ -19,10 +19,11 @@ async function getMessageById(messageId) {
   return messages.find((message) => (message.id = messageId));
 }
 
-function createMessage(message) {
+async function createMessage(message) {
+  console.log(message.text);
   messages.push({
     id: message.id,
-    message: message.text,
+    text: message.text,
     name: message.name,
     added: message.added,
   });
@@ -33,4 +34,4 @@ async function getMessages() {
   return messages;
 }
 
-module.exports = { getMessageById, getMessages };
+module.exports = { getMessageById, getMessages, createMessage };
