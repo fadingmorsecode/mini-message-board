@@ -27,7 +27,6 @@ indexRouter.post('/new', async (req, res) => {
     name: newMessage.messageName,
     added: new Date(),
   });
-  console.log(await db.getMessages());
   res.redirect('/');
 });
 

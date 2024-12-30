@@ -16,11 +16,12 @@ const messages = [
 ];
 
 async function getMessageById(messageId) {
-  return messages.find((message) => (message.id = messageId));
+  return messages.find((message) => {
+    return (message.id = messageId);
+  });
 }
 
 async function createMessage(message) {
-  console.log(message.text);
   messages.push({
     id: message.id,
     text: message.text,
@@ -30,7 +31,6 @@ async function createMessage(message) {
 }
 
 async function getMessages() {
-  console.log(messages);
   return messages;
 }
 
