@@ -93,6 +93,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  text-decoration: none;
 }
 
 .header-image {
@@ -181,7 +182,7 @@ main {
 }
 
 footer {
-  background-color: #011627;
+  background-color: #f6f7f8;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -189,7 +190,6 @@ footer {
 }
 
 footer > a {
-  text-decoration: none;
   color: #20a4f3;
   font-size: 1.5rem;
 }
