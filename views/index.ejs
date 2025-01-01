@@ -4,8 +4,8 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
+    <%- include('header.ejs', {newMessageLink: newMessageLink}) %>
     <h1>Messages</h1>
-    <a href="<%= newMessageLink.href %>"><%= newMessageLink.name %></a>
     <% messages.forEach((message) => { %> <%- include('message', { message:
     message } );%><% }); %>
   </body>

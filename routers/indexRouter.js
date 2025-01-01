@@ -11,7 +11,7 @@ indexRouter.get('/', async (req, res) =>
     title: 'Mini Message Board',
     messages: await db.getMessages(),
     newMessageLink: {
-      name: 'New Message',
+      name: 'Create Post',
       href: '/new',
     },
   })
