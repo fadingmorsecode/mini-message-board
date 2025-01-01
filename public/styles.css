@@ -254,3 +254,7 @@ footer > a {
 .message-group {
   flex-grow: 1;
 }
+
+.details-text {
+  word-break: break-word;
+}
