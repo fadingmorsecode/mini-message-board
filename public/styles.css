@@ -85,6 +85,7 @@ header {
   padding-top: 20px;
   padding-bottom: 20px;
   justify-content: space-between;
+  background-color: #f6f7f8;
 }
 
 .header-logo-group {
@@ -96,19 +97,20 @@ header {
 
 .header-image {
   font-size: 0;
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
 }
 
 .header-text {
   font-size: 3rem;
   font-family: lilita;
+  color: #ff3366;
 }
 
 .new-msg-link {
   text-decoration: none;
   color: black;
-  border: solid 2px black;
+  border: solid 2px #ff3366;
   border-radius: 8px;
   padding: 5px;
   font-size: 1.5rem;
@@ -122,7 +124,7 @@ main {
 }
 
 .main-heading {
-  font-size: 3rem;
+  font-size: 2.3rem;
 }
 
 .posts-container {
@@ -135,7 +137,8 @@ main {
 .message-card {
   display: flex;
   flex-direction: column;
-  border: solid 3px grey;
+  background-color: #f6f7f8;
+  border: solid 3px black;
   border-radius: 10px;
   height: 250px;
   padding: 20px;
@@ -145,7 +148,7 @@ main {
 }
 
 .message-name {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: italic;
 }
 
@@ -154,17 +157,25 @@ main {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  border-bottom: dashed 1px grey;
+  border-bottom: dashed 1px #2ec4b6;
 }
 
 .message-added {
   margin-bottom: 10px;
 }
 
+.message-card-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
 .view-post-link {
   text-decoration: none;
   color: black;
-  border: solid 2px black;
+  border: solid 2px #ff3366;
   padding: 5px;
   border-radius: 8px;
+  width: 135px;
+  text-align: center;
+  align-self: flex-end;
 }
