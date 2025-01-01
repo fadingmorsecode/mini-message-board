@@ -201,3 +201,56 @@ footer > a {
 }
 
 /* Message Details */
+
+.details-body {
+  display: flex;
+  height: 100%;
+}
+
+.main-details {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-grow: 1;
+}
+
+.details-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  border: solid 5px black;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.details-heading,
+.details-name-heading,
+.details-message-heading,
+.details-date-heading {
+  font-family: lilita;
+}
+
+.details-heading {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.name-group {
+  margin-bottom: 10px;
+}
+
+.details-name {
+  font-size: 1.2rem;
+}
+
+.details-heading-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message-group {
+  flex-grow: 1;
+}
