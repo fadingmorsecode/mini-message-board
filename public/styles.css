@@ -77,6 +77,8 @@ body {
   flex-direction: column;
 }
 
+/* Header */
+
 header {
   display: flex;
   align-items: center;
@@ -117,7 +119,9 @@ header {
   font-size: 1.5rem;
 }
 
-main {
+/* Home Main */
+
+.main-home {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,6 +185,8 @@ main {
   align-self: flex-end;
 }
 
+/* Footer */
+
 footer {
   background-color: #f6f7f8;
   padding: 10px;
@@ -193,3 +199,5 @@ footer > a {
   color: #20a4f3;
   font-size: 1.5rem;
 }
+
+/* Message Details */
