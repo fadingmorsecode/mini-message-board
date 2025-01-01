@@ -1,17 +1,18 @@
 const { v4: uuidv4 } = require('uuid');
+const { format } = require('date-fns');
 
 const messages = [
   {
     id: uuidv4(),
-    text: 'It seems alright, Jim.',
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
     name: 'George',
-    added: new Date(),
+    added: format(new Date(), 'PP'),
   },
   {
     id: uuidv4(),
-    text: 'Not a fan',
+    text: 'I swear I can speak a language other than lorem ipsum.',
     name: 'Paul',
-    added: new Date(),
+    added: format(new Date(), 'PP'),
   },
 ];
 

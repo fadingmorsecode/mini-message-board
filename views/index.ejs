@@ -5,8 +5,12 @@
   </head>
   <body>
     <%- include('header.ejs', {newMessageLink: newMessageLink}) %>
-    <h1>Messages</h1>
-    <% messages.forEach((message) => { %> <%- include('message', { message:
-    message } );%><% }); %>
+    <main>
+      <h1 class="main-heading">Posts</h1>
+      <div class="posts-container">
+        <% messages.forEach((message) => { %> <%- include('message', { message:
+        message } );%><% }); %>
+      </div>
+    </main>
   </body>
 </html>

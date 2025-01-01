@@ -1,6 +1,10 @@
-<div>
-  <p><%= message.name %></p>
-  <p><%= message.text %></p>
-  <p>Posted: <%= message.added %></p>
-  <a href="/message/<%= message.id %>">Details</a>
+<div class="message-card">
+  <p class="message-name"><%= message.name %></p>
+  <p class="message-text"><%= message.text %></p>
+  <div class="message-card-bottom">
+    <p class="message-added">Posted: <%= message.added %></p>
+    <a class="view-post-link" href="/message/<%= message.id %>"
+      >View Full Post</a
+    >
+  </div>
 </div>

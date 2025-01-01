@@ -1,6 +1,7 @@
 const { v4: uuidv4 } = require('uuid');
 const db = require('../db');
 const { getMessage } = require('../controllers/messagesController');
+const { format } = require('date-fns');
 
 const { Router } = require('express');
 
@@ -25,7 +26,7 @@ indexRouter.post('/new', async (req, res) => {
     id: uuidv4(),
     text: newMessage.messageText,
     name: newMessage.messageName,
-    added: new Date(),
+    added: format(new Date(), 'PP'),
   });
   res.redirect('/');
 });
