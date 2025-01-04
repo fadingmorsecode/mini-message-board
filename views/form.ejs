@@ -1,21 +1,27 @@
 <html>
   <link rel="stylesheet" href="/styles.css" />
-  <body>
+  <body class="form-body">
     <%- include('header.ejs') %>
-    <form method="POST" action="/new">
-      <legend>New Message</legend>
-      <label for="message-form-name-input">Name:</label>
-      <input name="messageName" id="messageName" type="text" required />
-      <label for="messageText">Message:</label>
-      <input
-        name="messageText"
-        id="messageText"
-        type="text"
-        maxlength="300"
-        required
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <main class="form-main">
+      <form method="POST" action="/new">
+        <legend class="form-legend">New Message</legend>
+        <div class="label-input-group">
+          <label for="message-form-name-input">Name:</label>
+          <input name="messageName" id="messageName" type="text" required />
+        </div>
+        <div class="label-input-group">
+          <label for="messageText">Message:</label>
+          <textarea
+            name="messageText"
+            id="messageText"
+            type="text"
+            maxlength="300"
+            required
+          ></textarea>
+        </div>
+        <button class="submit-btn" type="submit">Submit</button>
+      </form>
+    </main>
     <%- include('footer.ejs') %>
   </body>
 </html>

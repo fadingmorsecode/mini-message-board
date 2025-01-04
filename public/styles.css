@@ -192,7 +192,6 @@ footer {
   padding: 10px;
   display: flex;
   justify-content: center;
-  margin-top: 40px;
 }
 
 footer > a {
@@ -257,4 +256,52 @@ footer > a {
 
 .details-text {
   word-break: break-word;
+}
+
+/* Form */
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  align-self: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-body {
+  display: flex;
+  height: 100%;
+}
+
+.label-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+#messageText {
+  resize: none;
+  height: 150px;
+}
+
+.form-legend {
+  align-self: center;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  width: 75px;
+  align-self: center;
+  border: solid 2px #ff3366;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.form-main {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
 }
