@@ -21,7 +21,7 @@ async function getMessageById(messageId) {
 }
 
 async function createMessage(message) {
-  messages.push({
+  messages.unshift({
     id: message.id,
     text: message.text,
     name: message.name,
