@@ -322,15 +322,28 @@ form {
   }
 
   .header-text {
-    font-size: 1.8em;
+    font-size: 1.8rem;
     text-align: center;
   }
 
   .new-msg-link {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .message-card {
     width: 250px;
+  }
+
+  form {
+    width: 200px;
+  }
+
+  .form-legend {
+    font-size: 1.3rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    padding: 3px;
   }
 }
