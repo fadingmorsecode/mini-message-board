@@ -16,10 +16,6 @@ indexRouter.get('/', async (req, res) =>
 
 indexRouter.get('/message/:messageId', getMessage);
 
-indexRouter.get('/github', (req, res) => {
-  res.redirect('https://github.com/fadingmorsecode');
-});
-
 indexRouter.post('/new', async (req, res) => {
   const newMessage = req.body;
   await db.createMessage({
