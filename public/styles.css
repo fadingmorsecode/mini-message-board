@@ -306,3 +306,31 @@ form {
   justify-content: center;
   flex-grow: 1;
 }
+
+/* Mobile Media Query */
+
+@media screen and (max-width: 1000px) {
+  .header-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 15px;
+  }
+
+  .header-text {
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  .new-msg-link {
+    font-size: 1.2rem;
+  }
+
+  .message-card {
+    width: 250px;
+  }
+}
