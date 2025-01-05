@@ -346,4 +346,18 @@ form {
     font-size: 1rem;
     padding: 3px;
   }
+
+  .details-card {
+    width: 280px;
+    height: 360px;
+    overflow: scroll;
+  }
+
+  .details-heading {
+    font-size: 1.6rem;
+  }
+
+  .details-text {
+    font-size: 1rem;
+  }
 }
