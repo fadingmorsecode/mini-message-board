@@ -1,4 +1,4 @@
-const db = require('../db');
+const db = require('../db/db');
 
 async function getMessage(req, res) {
   const { messageId } = req.params;
