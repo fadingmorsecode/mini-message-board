@@ -1,9 +1,6 @@
 const { Client } = require('pg');
 const dotenv = require('dotenv').config();
-const { format } = require('date-fns');
-
-const currentDate = new Date();
-const formattedDate = format(currentDate, 'PP');
+const formattedDate = require('./currentDate');
 
 const SQL = `CREATE TABLE IF NOT EXISTS messages (
 id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY, name VARCHAR(255), message VARCHAR( 255 ), date  VARCHAR

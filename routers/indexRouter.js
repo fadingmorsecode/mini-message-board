@@ -18,7 +18,7 @@ indexRouter.get('/message/:messageId', getMessage);
 
 indexRouter.post('/new', async (req, res) => {
   const newMessage = req.body;
-  await queries.createMessage({
+  await queries.insertMessage({
     name: newMessage.messageName,
     message: newMessage.messageText,
   });
