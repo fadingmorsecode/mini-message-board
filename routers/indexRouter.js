@@ -1,5 +1,5 @@
 const { v4: uuidv4 } = require('uuid');
-const db = require('../db/db');
+const queries = require('../db/queries');
 const { getMessage } = require('../controllers/messagesController');
 const { format } = require('date-fns');
 
@@ -10,7 +10,7 @@ const indexRouter = Router();
 indexRouter.get('/', async (req, res) =>
   res.render('index', {
     title: 'Mini Message Board',
-    messages: await db.getMessages(),
+    messages: await queries.getAllMessages(),
   })
 );
 
@@ -18,11 +18,9 @@ indexRouter.get('/message/:messageId', getMessage);
 
 indexRouter.post('/new', async (req, res) => {
   const newMessage = req.body;
-  await db.createMessage({
-    id: uuidv4(),
-    text: newMessage.messageText,
+  await queries.createMessage({
     name: newMessage.messageName,
-    added: format(new Date(), 'PP'),
+    message: newMessage.messageText,
   });
   res.redirect('/');
 });

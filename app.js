@@ -11,6 +11,6 @@ app.use('/new', messageRouter);
 app.use(express.static(assetsPath));
 
 const PORT = 999;
-app.listen(PORT);
+app.listen(PORT, ('listening on', PORT));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
